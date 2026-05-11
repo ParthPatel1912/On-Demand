@@ -1,0 +1,1 @@
+var e=function(e){return e.SUPER_ADMIN=`SUPER_ADMIN`,e.ADMIN=`ADMIN`,e.SERVICE_PARTNER=`SERVICE_PARTNER`,e.CUSTOMER=`CUSTOMER`,e}({});export{e as t};

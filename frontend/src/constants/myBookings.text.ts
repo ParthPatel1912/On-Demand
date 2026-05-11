@@ -1,0 +1,15 @@
+export const MY_BOOKINGS_TEXT = {
+  title: " My Bookings",
+  tabUpcoming: "Upcoming",
+  tabCompleted: "Completed",
+  emptyUpcomingTitle: "No upcoming bookings",
+  emptyCompletedTitle: "No completed bookings",
+  emptyUpcomingDesc: "You don't have any upcoming service bookings yet.",
+  emptyCompletedDesc: "Your completed bookings will appear here.",
+  receiptNotAvailable: "Receipt not available",
+  invoiceSuccess: "Invoice downloaded successfully",
+  invoiceFailed: "Failed to download invoice. Please try again.",
+  loadingReceipt: "Loading...",
+  receiptBtn: "Receipt",
+  errorFetchingBookings: "Error fetching bookings:",
+};

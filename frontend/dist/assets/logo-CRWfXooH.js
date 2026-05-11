@@ -1,0 +1,1 @@
+var e=`/assets/logo-DAILYqa4.png`;export{e as t};

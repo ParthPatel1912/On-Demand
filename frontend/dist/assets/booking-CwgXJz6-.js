@@ -1,0 +1,1 @@
+import{v as e}from"./index-BhIUtGXc.js";var t=async t=>(await e.get(`/bookings/${t}/success-details`)).data,n=async t=>(await e.get(`/bookings/invoice/${t}`,{responseType:`blob`})).data,r=async t=>(await e.get(`/bookings/${t}/available-slots`)).data;export{r as n,t as r,n as t};

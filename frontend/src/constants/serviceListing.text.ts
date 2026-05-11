@@ -1,0 +1,17 @@
+export const SERVICE_LISTING_TEXT = {
+  searchPlaceholderPrefix: "Search for ",
+  searchPlaceholderSuffix: " Services",
+  searchBtn: "Search",
+  plusServices: "+ Services",
+  servicesFallback: "Services",
+  verifiedProfessionals: "Verified Professionals",
+  superiorStainRemoval: "Superior Stain Removal",
+  searchResultsFor: "Search results for ",
+  allServices: "All Services",
+  servicesCount: " Services",
+  noServicesFound: "No services found",
+  failedToFetchServices: "Failed to fetch services:",
+  failedToFetchServiceType: "Failed to fetch service type:",
+  servicesFound: "Services Found",
+  searchAdjustmentMsg: "Try adjusting your search or filters.",
+};

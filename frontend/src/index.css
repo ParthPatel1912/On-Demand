@@ -1,0 +1,244 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+@config "../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --spacing: 4px;
+
+    --background: 0, 0%, 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0, 0%, 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 242 73% 57%;
+    --primary-foreground: 0, 0%, 100%;
+    --primary-hover: 242 60% 47%;
+    --primary-soft: 242 72% 93%;
+
+    --secondary: 240 20% 96%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 240 10% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 240 20% 96%;
+    --accent-foreground: 220 20% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0, 0%, 100%;
+
+    --border: 220 13% 91%;
+    --outlined-border: 215, 33%, 90%;
+    --input: 220 13% 91%;
+    --ring: 242 73% 57%;
+
+    --radius: 0.5rem;
+
+    --brand: 242 73% 57%;
+    --brand-foreground: 0, 0%, 100%;
+    --brand-light: 242 72% 93%;
+
+    --cta: 38 100% 66%;
+    --cta-foreground: 220 20% 15%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 243 55% 55%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 243 55% 65%;
+    --primary-foreground: 0, 0%, 100%;
+    --primary-hover: 243 55% 60%;
+    --primary-soft: 243 55% 20%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 220 15% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 243 55% 65%;
+
+    --cta: 38 100% 66%;
+    --cta-foreground: 220 20% 10%;
+
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 0 0% 95%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --code-bg: #f4f3ec;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: "Montserrat", system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: "Montserrat", system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.dark {
+  /* Dark mode neutral colors */
+  --neutral-50: #16171d;
+  --neutral-100: #1f2028;
+  --neutral-200: #2e303a;
+  --neutral-300: #9ca3af;
+  --neutral-400: #d1d5db;
+  --neutral-500: #f3f4f6;
+  --neutral-600: #f9fafb;
+  --neutral-700: #ffffff;
+  --neutral-800: #ffffff;
+  --neutral-900: #ffffff;
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --code-bg: #1f2028;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
+  --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+}
+
+.dark #social .button-icon {
+  filter: invert(1) brightness(2);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+#root {
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(209 213 219);
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(156 163 175);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--border));
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--outlined-border));
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+.recharts-layer:focus {
+  outline: none !important;
+}
+
+/* Also remove any browser default focus ring */
+.recharts-wrapper *:focus {
+  outline: none !important;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+input[type="password"]::-ms-clear {
+  display: none;
+}

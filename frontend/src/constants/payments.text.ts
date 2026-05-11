@@ -1,0 +1,18 @@
+export const PAYMENTS_TEXT = {
+  title: "Payments & Transactions",
+  filterBtn: "Filter",
+  headerUser: "User",
+  headerTransactionID: "Transaction ID",
+  headerMobileNumber: "Mobile Number",
+  headerService: "Service",
+  headerAmount: "Amount",
+  headerPaymentMethod: "Payment Method",
+  failedToFetch: "Error fetching transactions:",
+  filterTitle: "Filter",
+  filterAmount: "Amount",
+  filterAll: "All",
+  filterCreditCard: "Credit Card",
+  filterCash: "Cash",
+  filterReset: "Reset",
+  filtering: "Filtering...",
+};

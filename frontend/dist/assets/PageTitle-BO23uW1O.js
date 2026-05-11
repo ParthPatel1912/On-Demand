@@ -1,0 +1,1 @@
+import{r as e}from"./utils-wQIzDSKh.js";var t=e(),n=({title:e,className:n,children:r})=>(0,t.jsxs)(`div`,{className:`flex justify-between items-center pb-3 ${n}`,children:[(0,t.jsx)(`h1`,{className:`text-start font-alexandria text-xl font-semibold text-ink truncate max-w-full`,children:e}),r]});export{n as t};
